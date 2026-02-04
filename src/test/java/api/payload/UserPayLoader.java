@@ -8,8 +8,26 @@ public class UserPayLoader {
     private Integer stCode;
     private Map<String, Object> payload;
     private Map<String, Object> validation;
+    private Map<String, Object> pathParam;
+    private Map<String, Object> queryParam;
 
-    
+    public Map<String, Object> getPathParam() {
+        return pathParam;
+    }
+
+    public void setPathParam(Map<String, Object> pathParam) {
+        this.pathParam = pathParam;
+    }
+
+    public Map<String, Object> getQueryParam() {
+        return queryParam;
+    }
+
+    public void setQueryParam(Map<String, Object> queryParam) {
+        this.queryParam = queryParam;
+    }
+
+
     public Map<String, Object> getValidation() {
         return validation;
     }
