@@ -1,0 +1,67 @@
+[
+  {
+    "tcN0": "TC_UGI01",
+    "testDesc": "Validate User by valid userid",
+    "pathParam": {
+      "id": 3
+    },
+    "queryParam": {},
+    "payload": {},
+    "stCode": 200,
+    "validation": {
+      "id": 3
+    }
+  },
+  {
+    "tcN0": "TC_UGI02",
+    "testDesc": "Validate User object contains email  filed ",
+    "pathParam": {
+      "id": 3
+    },
+    "queryParam": {},
+    "payload": {},
+    "stCode": 200,
+    "validation": {
+      "id": 3,
+      "email": "@x.dummyjson.com"
+    }
+  },
+  {
+    "tcN0": "TC_UGI03",
+    "testDesc": "Validate User  by invalid userid",
+    "pathParam": {
+      "id": "67909"
+    },
+    "queryParam": {},
+    "payload": {},
+    "stCode": 404,
+    "validation": {
+      "message": "not found"
+    }
+  },
+  {
+    "tcN0": "TC_UGI04",
+    "testDesc": "Validate User by invalid userid only alpha char",
+    "pathParam": {
+      "id": "typ"
+    },
+    "queryParam": {},
+    "payload": {},
+    "stCode": 400,
+    "validation": {
+      "message": "Invalid user id"
+    }
+  },
+  {
+    "tcN0": "TC_UGI05",
+    "testDesc": "Validate User by Passing empty string",
+    "pathParam": {
+      "id": " "
+    },
+    "queryParam": {},
+    "payload": {},
+    "stCode": 404,
+    "validation": {
+    }
+  }
+]

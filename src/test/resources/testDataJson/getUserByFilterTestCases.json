@@ -1,0 +1,114 @@
+[
+  {
+    "tcN0": "TC_UGF01",
+    "testDesc": "Validate User filter using the valid  firstname",
+    "pathParam": {
+      "key": "firstName",
+      "value": "Emily"
+    },
+    "queryParam": {
+    },
+    "payload": {},
+    "stCode": 200,
+    "validation": {
+      "total": 2,
+      "users[0].lastName": "John"
+    }
+  },
+  {
+    "tcN0": "TC_UGF02",
+    "testDesc": "Validate User filter using the dob",
+    "pathParam": {
+      "key": "birthDate",
+      "value": "1996-5-30"
+    },
+    "queryParam": {
+    },
+    "payload": {},
+    "stCode": 200,
+    "validation": {
+      "users[0].email": "@x.dummyjson.com",
+      "users[0].birthDate": "1996-5-30",
+      "total": 1
+    }
+  },
+  {
+    "tcN0": "TC_UGF03",
+    "testDesc": "Validate User filter using the address",
+    "pathParam": {
+    },
+    "queryParam": {
+      "key": "address.city",
+      "value": "Phoenix"
+    },
+    "payload": {},
+    "stCode": 200,
+    "validation": {
+      "total": 1,
+      "users[0].address.state": "Mississippi"
+    }
+  },
+  {
+    "tcN0": "TC_UGF04",
+    "testDesc": "Validate User filter using the currency type",
+    "pathParam": {
+      "key": "bank.currency",
+      "value": "GBP"
+    },
+    "queryParam": {
+    },
+    "payload": {},
+    "stCode": 200,
+    "validation": {
+      "total": 1,
+      "users.bank.currency": "GBP"
+    }
+  },
+  {
+    "tcN0": "TC_UGS05",
+    "testDesc": "Validate User filter using the invalid keys",
+    "pathParam": {
+      "key": "first",
+      "value": "GBP"
+    },
+    "queryParam": {
+    },
+    "payload": {},
+    "stCode": 200,
+    "validation": {
+      "users": []
+    }
+  },
+  {
+    "tcN0": "TC_UGS06",
+    "testDesc": "Validate User filter for empty input",
+    "pathParam": {
+      "key": " ",
+      "value": " "
+    },
+    "queryParam": {
+    },
+    "payload": {},
+    "stCode": 200,
+    "validation": {
+      "total": 0,
+      "users": []
+    }
+  },
+  {
+    "tcN0": "TC_UGS07",
+    "testDesc": "Validate User filter using valid case sensitive key and value",
+    "pathParam": {
+      "key": " firstname",
+      "value": "emily "
+    },
+    "queryParam": {
+    },
+    "payload": {},
+    "stCode": 200,
+    "validation": {
+      "total": 0,
+      "users": []
+    }
+  }
+]
