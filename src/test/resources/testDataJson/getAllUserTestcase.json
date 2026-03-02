@@ -1,0 +1,38 @@
+[
+  {
+    "tcN0": "TC_UG01",
+    "testDesc": "Validate the  total count is greater then zero",
+    "payload": {},
+    "stCode": 200,
+    "validation": {
+      "total": 0
+    }
+  },
+  {
+    "tcN0": "TC_UG02",
+    "testDesc": "Validate the email contains @ symbol",
+    "payload": {},
+    "stCode": 200,
+    "validation": {
+      "users[0].email": "@"
+    }
+  },
+  {
+    "tcN0": "TC_UG03",
+    "testDesc": "Validate the users object contains admin role",
+    "payload": {},
+    "stCode": 200,
+    "validation": {
+      "users[0].role": "admin"
+    }
+  },
+  {
+    "tcN0": "TC_UG04",
+    "testDesc": "Validate the user id is greater then 0",
+    "payload": {},
+    "stCode": 200,
+    "validation": {
+      "users[0].id": 0
+    }
+  }
+]

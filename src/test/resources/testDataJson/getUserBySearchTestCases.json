@@ -1,0 +1,88 @@
+[
+  {
+    "tcN0": "TC_UGS01",
+    "testDesc": "Validate User by valid search keyword (partial name)",
+    "pathParam": {
+    },
+    "queryParam": {
+      "q": "John"
+    },
+    "payload": {},
+    "stCode": 200,
+    "validation": {
+      "users[0].lastName": "John"
+    }
+  },
+  {
+    "tcN0": "TC_UGS02",
+    "testDesc": "Validate User by valid search keyword (partial email) ",
+    "pathParam": {
+    },
+    "queryParam": {
+      "q": "emily.johnson@"
+    },
+    "payload": {},
+    "stCode": 200,
+    "validation": {
+      "users[0].email": "@x.dummyjson.com"
+    }
+  },
+  {
+    "tcN0": "TC_UGS03",
+    "testDesc": "Validate User  by invalid search keyword",
+    "pathParam": {
+    },
+    "queryParam": {
+      "q": "3693233511855044"
+    },
+    "payload": {},
+    "stCode": 200,
+    "validation": {
+      "total": 0
+    }
+  },
+  {
+    "tcN0": "TC_UGS04",
+    "testDesc": "Validate User by invalid search keyword alpha-numeric char",
+    "pathParam": {
+    },
+    "queryParam": {
+      "q": "th123"
+    },
+    "payload": {},
+    "stCode": 200,
+    "validation": {
+      "total": 0
+    }
+  },
+  {
+    "tcN0": "TC_UGS05",
+    "testDesc": "Validate User by Passing empty string",
+    "pathParam": {
+    },
+    "queryParam": {
+      "q": " "
+    },
+    "payload": {},
+    "stCode": 200,
+    "validation": {
+      "users": [],
+      "total": 200
+    }
+  },
+  {
+    "tcN0": "TC_UGS06",
+    "testDesc": "Validate User by valid search keyword (by role)",
+    "pathParam": {
+    },
+    "queryParam": {
+      "q": "admin"
+    },
+    "payload": {},
+    "stCode": 200,
+    "validation": {
+      "total": 0,
+      "users": []
+    }
+  }
+]
